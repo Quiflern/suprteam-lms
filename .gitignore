@@ -1,0 +1,96 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Environment files
+.env*.local
+
+# Next.js
+.next/
+.out/
+
+# Production build
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+trace.log
+*.log
+
+# OS
+ds_store
+.DS_Store
+
+# Testing
+coverage/
+
+# Misc
+*.lock
+*.key
+*.pem
+*.crt
+*.cert
+
+# Debug
+debug.log
+*.log
+
+# Local storage
+storage/
+
+# Cache
+.cache/
+*.cache
+
+# Parcel
+.parcel-cache/
+
+# Lerna
+lerna-debug.log
+
+# Yarn
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# npm
+npm-debug.log*
+
+# pnpm
+.pnpm-debug.log
+
+# TypeScript
+tsconfig.tsbuildinfo
+
+# Testing
+test-results.xml
+
+# Coverage
+coverage/
+.lcov
+
+# Editor
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~

@@ -30,8 +30,6 @@
     "clsx": "^2.1.0",
     "lucide-react": "^0.303.0",
     "next": "^14.1.0",
-    "@next-auth/google": "^0.0.0",
-    "@next-auth/github": "^0.0.0",
     "i18next": "^23.10.1",
     "next-auth": "^4.24.5",
     "next-themes": "^0.2.1",

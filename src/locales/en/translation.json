@@ -1,0 +1,115 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "back": "Back",
+    "next": "Next",
+    "save": "Save",
+    "cancel": "Cancel",
+    "connectWallet": "Connect Wallet",
+    "disconnect": "Disconnect"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "signOut": "Sign Out",
+    "googleSignIn": "Sign in with Google",
+    "githubSignIn": "Sign in with GitHub",
+    "walletSignIn": "Sign in with Wallet"
+  },
+  "navigation": {
+    "home": "Home",
+    "courses": "Courses",
+    "dashboard": "Dashboard",
+    "leaderboard": "Leaderboard",
+    "profile": "Profile",
+    "settings": "Settings"
+  },
+  "courses": {
+    "catalog": "Course Catalog",
+    "allCourses": "All Courses",
+    "searchPlaceholder": "Search courses...",
+    "filterDifficulty": "Filter by difficulty",
+    "filterDuration": "Filter by duration",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced",
+    "startCourse": "Start Course",
+    "continueCourse": "Continue Course",
+    "courseProgress": "Course Progress",
+    "lessonsCompleted": "Lessons Completed",
+    "xpEarned": "XP Earned"
+  },
+  "dashboard": {
+    "yourProgress": "Your Learning Progress",
+    "yourCourses": "Your Courses",
+    "recentActivity": "Recent Activity",
+    "yourStreak": "Your Streak",
+    "achievements": "Achievements",
+    "recommended": "Recommended Courses",
+    "daysInRow": "days in a row",
+    "viewCalendar": "View Calendar"
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "topLearners": "Top Learners",
+    "weekly": "Weekly",
+    "monthly": "Monthly",
+    "allTime": "All Time",
+    "rank": "Rank",
+    "username": "Username",
+    "xp": "XP",
+    "level": "Level",
+    "streak": "Streak"
+  },
+  "profile": {
+    "yourProfile": "Your Profile",
+    "skills": "Skills",
+    "onChainCredentials": "On-Chain Credentials",
+    "completedCourses": "Completed Courses",
+    "activity": "Activity",
+    "noCredentials": "No credentials earned yet",
+    "noCourses": "No courses completed yet",
+    "verifyOnExplorer": "Verify on Solana Explorer"
+  },
+  "settings": {
+    "profileSettings": "Profile Settings",
+    "accountSettings": "Account Settings",
+    "preferences": "Preferences",
+    "privacy": "Privacy",
+    "username": "Username",
+    "bio": "Bio",
+    "twitterHandle": "Twitter Handle",
+    "connectedWallet": "Connected Wallet",
+    "additionalAuth": "Additional Authentication",
+    "language": "Language",
+    "theme": "Theme",
+    "emailNotifications": "Email Notifications",
+    "profileVisibility": "Profile Visibility",
+    "dataExport": "Data Export",
+    "deleteAccount": "Delete Account",
+    "connected": "Connected",
+    "notConnected": "Not connected",
+    "connect": "Connect"
+  },
+  "gamification": {
+    "xp": "XP",
+    "level": "Level",
+    "streak": "Streak",
+    "achievements": "Achievements",
+    "leaderboard": "Leaderboard",
+    "dailyBonus": "Daily Bonus",
+    "lessonCompletion": "Lesson Completion",
+    "courseCompletion": "Course Completion",
+    "streakBonus": "Streak Bonus"
+  },
+  "errors": {
+    "connectionFailed": "Connection failed",
+    "authFailed": "Authentication failed",
+    "notFound": "Not found",
+    "accessDenied": "Access denied",
+    "somethingWentWrong": "Something went wrong"
+  }
+}

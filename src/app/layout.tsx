@@ -4,10 +4,13 @@ import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { WalletProvider } from '@/components/wallet-provider';
 import { AuthProvider } from '@/components/auth-provider';
+import { I18nProvider } from '@/components/i18n-provider';
+import { AnalyticsProvider } from '@/components/analytics-provider';
 import { LearningProvider } from '@/context/LearningContext';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
+import { GoogleAnalytics } from '@/components/google-analytics';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,18 +27,23 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
+        <GoogleAnalytics />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <AuthProvider>
-            <WalletProvider>
-              <LearningProvider>
-                <div className="flex flex-col min-h-screen">
-                  <Header />
-                  <main className="flex-grow">{children}</main>
-                  <Footer />
-                </div>
-                <Toaster />
-              </LearningProvider>
-            </WalletProvider>
+            <I18nProvider>
+              <AnalyticsProvider>
+                <WalletProvider>
+                  <LearningProvider>
+                    <div className="flex flex-col min-h-screen">
+                      <Header />
+                      <main className="flex-grow">{children}</main>
+                      <Footer />
+                    </div>
+                    <Toaster />
+                  </LearningProvider>
+                </WalletProvider>
+              </AnalyticsProvider>
+            </I18nProvider>
           </AuthProvider>
         </ThemeProvider>
       </body>

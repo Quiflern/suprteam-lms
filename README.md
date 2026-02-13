@@ -22,10 +22,17 @@ The ultimate learning platform for Solana-native developers. Interactive courses
 - ✅ Lesson View with interactive code editor
 - ✅ User Dashboard with progress tracking
 - ✅ Leaderboard with XP-based rankings
+- ✅ User Profile with credentials and achievements
+- ✅ Certificate/Credential View with verification
+- ✅ Settings page with account management
 - ✅ Wallet authentication (Phantom, Solflare)
+- ✅ Google & GitHub authentication
+- ✅ Account linking (multiple auth methods)
 - ✅ Gamification system (XP, levels, streaks)
-- ✅ Multi-language support
+- ✅ Multi-language support (EN, PT-BR, ES)
 - ✅ Light/Dark theme toggle
+- ✅ Internationalization (i18n) with react-i18next
+- ✅ Analytics (GA4, PostHog, Sentry)
 
 ### Gamification System
 - **XP & Leveling**: `Level = floor(sqrt(totalXP / 100))`
@@ -40,10 +47,25 @@ The ultimate learning platform for Solana-native developers. Interactive courses
 - ✅ Test case validation
 - ✅ Solution reveal functionality
 
+### Authentication & Account Linking
+- ✅ Solana Wallet Adapter (Phantom, Solflare)
+- ✅ Google OAuth authentication
+- ✅ GitHub OAuth authentication
+- ✅ Account linking (connect multiple auth methods)
+- ✅ Session management with NextAuth.js
+
 ### On-Chain Integration (Stubbed)
 - `LearningProgressService` interface for future on-chain connection
 - Local storage implementation for development
 - Ready for Solana program integration
+- Certificate/credential system with verification
+
+### Analytics & Monitoring
+- ✅ Google Analytics 4 integration
+- ✅ PostHog analytics with event tracking
+- ✅ Sentry error monitoring
+- ✅ Custom analytics service for learning events
+- ✅ User behavior tracking and insights
 
 ## Getting Started
 
@@ -79,9 +101,26 @@ Open [http://localhost:3000](http://localhost:3000) with your browser.
 Create a `.env.local` file:
 
 ```env
+# Next.js environment variables
 NEXT_PUBLIC_SOLANA_NETWORK=devnet
-NEXTAUTH_SECRET=your-secret-key
+
+# NextAuth.js configuration
+NEXTAUTH_SECRET=your-secret-key-here
 NEXTAUTH_URL=http://localhost:3000
+
+# Google Auth (optional)
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+
+# GitHub Auth (optional)
+GITHUB_CLIENT_ID=your-github-client-id
+GITHUB_CLIENT_SECRET=your-github-client-secret
+
+# Analytics
+NEXT_PUBLIC_GA_MEASUREMENT_ID=your-ga-measurement-id
+NEXT_PUBLIC_POSTHOG_KEY=your-posthog-key
+NEXT_PUBLIC_POSTHOG_HOST=https://app.posthog.com
+NEXT_PUBLIC_SENTRY_DSN=your-sentry-dsn
 ```
 
 ## Architecture

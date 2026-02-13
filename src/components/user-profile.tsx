@@ -4,6 +4,7 @@ import { Badge } from './ui/badge';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { LocalLearningProgressService } from '@/services/learning-progress.service';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export function UserProfile() {
   const wallet = useWallet();
@@ -132,13 +133,19 @@ export function UserProfile() {
                       {credential.description}
                     </p>
                     <div className="flex gap-2">
+                      <Link
+                        href={`/certificates/${credential.id}`}
+                        className="text-sm text-primary-500 hover:underline"
+                      >
+                        View Certificate
+                      </Link>
                       <a
                         href={credential.verificationLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm text-primary-500 hover:underline"
                       >
-                        Verify on Solana Explorer
+                        Verify
                       </a>
                     </div>
                   </div>

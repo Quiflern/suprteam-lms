@@ -23,11 +23,20 @@ graph TD
 - Server Components for static content
 - Client Components for interactive elements
 - Hybrid rendering for optimal performance
+- Internationalization with react-i18next
+- Multi-language support (EN, PT-BR, ES)
 
 **State Management**:
 - React Context for global state
 - Local component state for UI interactions
 - Service layer for business logic
+- NextAuth.js for authentication state
+
+**Authentication**:
+- Solana Wallet Adapter (Phantom, Solflare)
+- NextAuth.js for Google/GitHub OAuth
+- Session management with JWT
+- Account linking for multiple auth methods
 
 ### Service Layer
 
@@ -247,49 +256,72 @@ sequenceDiagram
 
 ### Current Implementation
 
-- Language switcher component
-- Basic routing for language support
-- Ready for i18n library integration
+- ✅ Language switcher component with react-i18next
+- ✅ Full i18n support for all UI components
+- ✅ Three languages supported: English, Portuguese (PT-BR), Spanish (ES)
+- ✅ Translation files for all UI strings
+- ✅ Language detection and persistence
 
-### Future Implementation
+### Implementation Details
 
 ```javascript
-// next-i18next configuration
-module.exports = {
-  i18n: {
-    locales: ['en', 'pt', 'es'],
-    defaultLocale: 'en',
-    domains: [
-      {
-        domain: 'superteam.academy',
-        defaultLocale: 'en',
-      },
-      {
-        domain: 'superteam.academy/pt',
-        defaultLocale: 'pt',
-      },
-      {
-        domain: 'superteam.academy/es',
-        defaultLocale: 'es',
-      },
-    ],
+// i18n configuration
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+i18n.use(initReactI18next).init({
+  resources: {
+    en: { translation: translationEN },
+    pt: { translation: translationPT },
+    es: { translation: translationES },
   },
-}
+  lng: 'en',
+  fallbackLng: 'en',
+});
 ```
+
+### Language Switching
+
+The application supports dynamic language switching without page reloads:
+- Language switcher in header
+- Automatic language detection from browser settings
+- Cookie-based language persistence
+- Real-time translation updates
 
 ## Analytics & Monitoring
 
 ### Current Implementation
 
-- Basic error boundaries
-- Console logging for development
+- ✅ Google Analytics 4 integration
+- ✅ PostHog analytics with heatmaps and session recordings
+- ✅ Sentry error monitoring and reporting
+- ✅ Custom analytics service for learning events
+- ✅ User behavior tracking and engagement metrics
 
-### Future Implementation
+### Implementation Details
 
-- **Google Analytics 4**: User behavior tracking
-- **Sentry**: Error monitoring and reporting
-- **Hotjar/PostHog**: Heatmaps and session recordings
-- **Custom Events**: Track learning progress and engagement
+```typescript
+// Analytics service with comprehensive tracking
+export const Analytics = {
+  trackLessonStarted: (courseId, lessonId) => {},
+  trackLessonCompleted: (courseId, lessonId, xpEarned) => {},
+  trackCourseEnrolled: (courseId) => {},
+  trackCourseCompleted: (courseId, totalXp) => {},
+  trackXPEarned: (amount, source) => {},
+  trackStreakUpdated: (currentStreak, longestStreak) => {},
+  trackAchievementUnlocked: (achievementId) => {},
+  trackWalletConnected: (walletType) => {},
+  trackAuthMethodAdded: (method) => {},
+};
+```
+
+### Analytics Provider
+
+- Automatic page view tracking
+- User identification with wallet addresses
+- Event tracking for all learning activities
+- Error monitoring with Sentry
+- Performance monitoring
 
 ## Deployment Strategy
 

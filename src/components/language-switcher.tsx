@@ -10,14 +10,17 @@ import {
   DropdownMenuTrigger,
 } from './ui/dropdown-menu';
 import { Languages } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function LanguageSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
+  const { i18n } = useTranslation();
 
   const changeLanguage = (lang: string) => {
-    // Simple language switching - in a real app, you'd use next-i18next
-    router.push(`/${lang}${pathname}`);
+    i18n.changeLanguage(lang);
+    // In a real app with routing, you might also change the URL
+    // router.push(`/${lang}${pathname}`);
   };
 
   return (
